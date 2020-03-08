@@ -1,0 +1,20 @@
+{
+  "name": "file-serving",
+  "version": "1.0.0",
+  "description": "Serving static files in nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeXaver/node-file-serving.git"
+  },
+  "author": "Mitchel Okomor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeXaver/node-file-serving/issues"
+  },
+  "homepage": "https://github.com/CodeXaver/node-file-serving#readme"
+}
