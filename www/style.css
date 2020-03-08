@@ -1,0 +1,31 @@
+.container{
+    width: 50%;
+    height: 50;
+    padding: 1em;
+    margin: auto;
+    background-color: aqua;
+    color: blue;
+    border-radius: 20px; 
+    border: 3px solid gray; 
+    align-content: center; 
+    align-items: center;
+}
+
+li{ 
+    font-size: 20px;
+    padding: 0.3em;
+    width: fit-content;
+}
+
+li:hover{
+    background-color: black;
+    color: aliceblue;
+}
+h2{
+    text-align: center;
+    width: 100%;
+}
+
+ul{
+    padding-left: 100px;
+}
