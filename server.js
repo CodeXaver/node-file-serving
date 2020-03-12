@@ -21,8 +21,16 @@ const server = http.createServer ((req, res) => {
     case '.css':
       contentType = 'text/css';
       break;
+      
     case '.pdf':
-      contentType = 'application/force-download';
+      contentType = 'application/pdf';
+      let file = fs.createReadStream(filePath);
+    const stat = fs.statSync(filePath);
+    res.setHeader('Content-Length', stat.size);
+    res.setHeader('Content-Type', contentType);
+    file.pipe(res);
+      break;
+
     case '.json':
       contentType = 'application/json';
       break;
@@ -61,7 +69,8 @@ const server = http.createServer ((req, res) => {
     } else {
       console.log ('sending response');
       res.writeHead (200, {'Content-Type': contentType});
-      res.end (content, 'utf-8');
+      res.write(content, 'utf-8');
+      res.end ();
     }
   });
 });
